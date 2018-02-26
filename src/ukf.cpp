@@ -12,6 +12,9 @@ using std::vector;
  * This is scaffolding, do not modify
  */
 UKF::UKF() {
+  ///* initially set to false, set to true in first call of ProcessMeasurement
+  is_initialized_ = false;
+
   // if this is false, laser measurements will be ignored (except during init)
   use_laser_ = true;
 
