@@ -91,5 +91,13 @@ int main() {
   cout << "Yaw acceleration mean = " << mean_yaw_accel << endl;
   cout << "Yaw acceleration stddev = " << stddev_yaw_accel << endl;
 
+  ofstream accelFile("accel-data.txt", ios::trunc);
+  if (accelFile.is_open()) {
+    for (int i = 0; i < longitudinal_accels.size(); ++i) {
+      accelFile << longitudinal_accels[i] << "    " << yaw_accels[i] << endl;
+    }
+    accelFile.close();
+  }
+
   return 0;
 }

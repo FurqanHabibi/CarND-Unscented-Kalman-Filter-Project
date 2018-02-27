@@ -5,6 +5,8 @@
         "limits": "cpp",
         "array": "cpp",
         "slist": "cpp",
-        "initializer_list": "cpp"
+        "initializer_list": "cpp",
+        "*.ipp": "cpp",
+        "geometry": "cpp"
     }
 }
